@@ -4,14 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $page_title ?? 'Đăng Khoa - Full Stack Developer'; ?></title>
-    <meta name="description" content="<?php echo $meta_desc ?? 'Portfolio và CV Online của Đăng Khoa'; ?>">
+    <meta name="description" content="<?php echo $meta_desc ?? 'Portfolio và CV Online của Đăng Khoa. Chuyên thiết kế Website, Lập trình Mobile App và Tư vấn giải pháp phần mềm.'; ?>">
+    <meta name="keywords" content="web developer, frontend, backend, lập trình, portfolio, Đăng Khoa, full stack">
+    <meta name="author" content="Cao Đăng Khoa">
+
+    <link rel="icon" type="image/png" href="<?php echo $project_folder ?? ''; ?>/assets/img/logo.avif">
+    <link rel="apple-touch-icon" href="<?php echo $project_folder ?? ''; ?>/assets/img/logo.avif">
+
     <meta property="og:title" content="<?php echo $page_title ?? 'Đăng Khoa Portfolio'; ?>">
-    <meta property="og:image" content="<?php echo $meta_image ?? ''; ?>">
+    <meta property="og:description" content="<?php echo $meta_desc ?? 'Portfolio và CV Online của Đăng Khoa.'; ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo 'https://dangkhoa.dev' . ($project_folder ?? ''); ?>/trang-chu">
+    <meta property="og:image" content="<?php echo $meta_image ?? ($project_folder . '/assets/img/logo.avif'); ?>">
+    <meta property="og:site_name" content="Đăng Khoa Portfolio & Services">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dangkhoa_dev">
+    <meta name="twitter:creator" content="@dangkhoa_dev">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="<?php echo $project_folder ?? ''; ?>/assets/css/home.css">
 </head>
 
@@ -28,8 +41,8 @@
                 </div>
 
                 <div class="header-actions show-on-desktop">
-                    <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/dangkhoa2004" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/khoa-cao-%C4%91%C4%83ng-94051a390/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
                     <a href="<?php echo $project_folder ?? ''; ?>/lien-he" class="btn-cta-header">
                         <i class="fas fa-paper-plane"></i> Thuê tôi ngay
                     </a>

@@ -322,12 +322,19 @@ $row2 = array_slice($tech_stack, $chunk_size);
                     <span class="section-tag">Đánh giá</span>
                     <h2 class="section-title" style="margin-bottom: 30px;">Khách hàng nói gì?</h2>
                     <div style="display: flex; flex-direction: column; gap: 30px;">
-                        <?php if (!empty($reviews)): foreach (array_slice($reviews, 0, 3) as $r): ?>
+                        <?php if (!empty($reviews)): foreach (array_slice($reviews, 0, 3) as $index => $r):
+                                // Bổ sung: Lấy đường dẫn AVIF cục bộ
+                                // Cần đảm bảo các file review-0.avif, review-1.avif, review-2.avif có tồn tại trong /assets/img/avatars/
+                                $avatar_path = ($project_folder ?? '') . "/assets/img/review-" . $index . ".avif";
+                        ?>
                                 <div class="review-card fade-up">
                                     <p style="font-style: italic; color: #555; margin-bottom: 20px;">"<?php echo $r['review_text']; ?>"</p>
                                     <div style="display: flex; align-items: center; gap: 15px;">
                                         <div style="width: 45px; height: 45px; background: #ddd; border-radius: 50%; overflow: hidden;">
-                                            <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($r['user_name']); ?>&background=random" style="width: 100%;">
+                                            <img
+                                                src="<?php echo $avatar_path; ?>"
+                                                alt="Avatar của <?php echo $r['user_name']; ?>"
+                                                style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                         <div>
                                             <div style="font-weight: bold; color: var(--dark);"><?php echo $r['user_name']; ?></div>
