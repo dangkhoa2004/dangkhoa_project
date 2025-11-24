@@ -75,8 +75,8 @@ $row2 = array_slice($tech_stack, $chunk_size);
                         <a href="#contact" class="btn btn-primary shine-effect">
                             Bắt đầu dự án <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="#portfolio" class="btn btn-outline">
-                            Xem Portfolio <i class="fas fa-layer-group"></i>
+                        <a href="#projects" class="btn btn-outline">
+                            Xem Projects <i class="fas fa-layer-group"></i>
                         </a>
                     </div>
 
