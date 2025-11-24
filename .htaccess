@@ -1,5 +1,20 @@
 RewriteEngine On
 
+# -----------------
+# THÊM CÁC QUY TẮC NÀY VÀO FILE .htaccess GỐC
+# -----------------
+# 1. Chặn các file cấu hình và tài liệu không cần thiết
+<FilesMatch "^(\.htaccess|\.htpasswd|\.gitattributes|README\.md|config\.php|db\.php)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 2. Ngăn chặn việc hiển thị nội dung thư mục (Directory Listing)
+Options -Indexes
+
+# -----------------
+# QUY TẮC ĐỊNH TUYẾN GỐC (Đã có sẵn)
+# -----------------
 # Nếu không phải là file thực (ảnh, css, js)
 RewriteCond %{REQUEST_FILENAME} !-f
 # Và không phải là thư mục thực

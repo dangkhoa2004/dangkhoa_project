@@ -1,0 +1,12 @@
+# Thêm file .htaccess vào thư mục includes/
+
+<IfModule mod_rewrite.c>
+    # 1. Chặn tất cả các yêu cầu truy cập HTTP
+    Deny from all
+</IfModule>
+
+# HOẶC cách khác an toàn hơn: Chặn truy cập trực tiếp vào file PHP
+<Files ~ "\.php$">
+    Order allow,deny
+    Deny from all
+</Files>
