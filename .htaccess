@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Nếu không phải là file thực (ảnh, css, js)
+RewriteCond %{REQUEST_FILENAME} !-f
+# Và không phải là thư mục thực
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Thì chuyển hướng tất cả về index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
