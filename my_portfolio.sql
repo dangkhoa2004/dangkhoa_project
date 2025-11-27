@@ -158,7 +158,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `name`, `role`, `phone`, `email`, `about_text`, `img`) VALUES
-(1, 'Đăng Khoa', 'Full Stack Developer', '0909.123.456', 'contact@dangkhoa.com', '5 năm kinh nghiệm xây dựng hệ thống web quy mô lớn.', '/dangkhoa_project/assets/img/avt-min.avif');
+(1, 'Đăng Khoa', 'Full Stack Developer', '0909.123.456', 'contact@dangkhoa.com', '5 năm kinh nghiệm xây dựng hệ thống web quy mô lớn.', '/assets/img/avt-min.avif');
 
 -- --------------------------------------------------------
 
@@ -184,12 +184,12 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `name`, `role`, `year`, `type`, `img`, `description`, `tech_stack`, `gallery`, `link_demo`) VALUES
-(1, 'E-commerce Fashion', 'Full Stack Dev', '2023', 'Web', '/dangkhoa_project/assets/img/project1.avif', 'Website bán hàng thời trang tích hợp thanh toán online và quản lý kho hàng.', '[\"Laravel\", \"VueJS\", \"MySQL\", \"Stripe\"]', '[\"https://via.placeholder.com/800x600\", \"https://via.placeholder.com/800x600\"]', '#'),
-(2, 'Health Tracking App', 'Mobile Dev', '2024', 'App', '/dangkhoa_project/assets/img/project2.avif', 'Ứng dụng theo dõi sức khỏe, đếm bước chân và nhắc nhở uống nước.', '[\"Flutter\", \"Firebase\", \"Google Fit API\"]', '[]', '#'),
-(3, 'Banking Dashboard UI', 'UI/UX Designer', '2023', 'Design', '/dangkhoa_project/assets/img/project3.avif', 'Thiết kế giao diện quản lý tài chính ngân hàng hiện đại, tối ưu trải nghiệm người dùng.', '[\"Figma\", \"Adobe XD\", \"Photoshop\"]', '[]', '#'),
-(4, 'Real Estate Platform', 'Backend Lead', '2022', 'Web', '/dangkhoa_project/assets/img/project4.avif', 'Nền tảng đăng tin bất động sản với tính năng bản đồ và tìm kiếm nâng cao.', '[\"NodeJS\", \"MongoDB\", \"ReactJS\", \"Google Maps\"]', '[]', '#'),
-(5, 'Food Delivery App', 'Mobile Dev', '2024', 'App', '/dangkhoa_project/assets/img/project5.avif', 'Ứng dụng đặt đồ ăn nhanh, giao hàng hỏa tốc và theo dõi tài xế thời gian thực.', '[\"React Native\", \"Redux\", \"Socket.io\"]', '[]', '#'),
-(6, 'Travel Booking System', 'Full Stack Dev', '2023', 'Web', '/dangkhoa_project/assets/img/project6.avif', 'Hệ thống đặt vé máy bay và khách sạn trực tuyến quy mô lớn.', '[\"PHP\", \"MySQL\", \"jQuery\", \"Bootstrap\"]', '[]', '#');
+(1, 'E-commerce Fashion', 'Full Stack Dev', '2023', 'Web', '/assets/img/project1.avif', 'Website bán hàng thời trang tích hợp thanh toán online và quản lý kho hàng.', '[\"Laravel\", \"VueJS\", \"MySQL\", \"Stripe\"]', '[\"https://via.placeholder.com/800x600\", \"https://via.placeholder.com/800x600\"]', '#'),
+(2, 'Health Tracking App', 'Mobile Dev', '2024', 'App', '/assets/img/project2.avif', 'Ứng dụng theo dõi sức khỏe, đếm bước chân và nhắc nhở uống nước.', '[\"Flutter\", \"Firebase\", \"Google Fit API\"]', '[]', '#'),
+(3, 'Banking Dashboard UI', 'UI/UX Designer', '2023', 'Design', '/assets/img/project3.avif', 'Thiết kế giao diện quản lý tài chính ngân hàng hiện đại, tối ưu trải nghiệm người dùng.', '[\"Figma\", \"Adobe XD\", \"Photoshop\"]', '[]', '#'),
+(4, 'Real Estate Platform', 'Backend Lead', '2022', 'Web', '/assets/img/project4.avif', 'Nền tảng đăng tin bất động sản với tính năng bản đồ và tìm kiếm nâng cao.', '[\"NodeJS\", \"MongoDB\", \"ReactJS\", \"Google Maps\"]', '[]', '#'),
+(5, 'Food Delivery App', 'Mobile Dev', '2024', 'App', '/assets/img/project5.avif', 'Ứng dụng đặt đồ ăn nhanh, giao hàng hỏa tốc và theo dõi tài xế thời gian thực.', '[\"React Native\", \"Redux\", \"Socket.io\"]', '[]', '#'),
+(6, 'Travel Booking System', 'Full Stack Dev', '2023', 'Web', '/assets/img/project6.avif', 'Hệ thống đặt vé máy bay và khách sạn trực tuyến quy mô lớn.', '[\"PHP\", \"MySQL\", \"jQuery\", \"Bootstrap\"]', '[]', '#');
 
 -- --------------------------------------------------------
 
