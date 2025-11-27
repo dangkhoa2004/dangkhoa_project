@@ -1,24 +1,32 @@
-RewriteEngine On
-
-# -----------------
-# THÊM CÁC QUY TẮC NÀY VÀO FILE .htaccess GỐC
-# -----------------
-# 1. Chặn các file cấu hình và tài liệu không cần thiết
-<FilesMatch "^(\.htaccess|\.htpasswd|\.gitattributes|README\.md|config\.php|db\.php)">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# 2. Ngăn chặn việc hiển thị nội dung thư mục (Directory Listing)
+# ----------------------------------------------------------------------
+# 1. CẤU HÌNH CƠ BẢN & BẢO MẬT
+# ----------------------------------------------------------------------
+# Tắt tính năng liệt kê danh sách file trong thư mục (tránh lộ dữ liệu)
 Options -Indexes
 
-# -----------------
-# QUY TẮC ĐỊNH TUYẾN GỐC (Đã có sẵn)
-# -----------------
-# Nếu không phải là file thực (ảnh, css, js)
+# Bật bộ máy ghi lại đường dẫn
+RewriteEngine On
+
+# Chặn truy cập trực tiếp vào các file nhạy cảm và file cấu hình
+# Bao gồm: .htaccess, .git, config.php, db.php, các file markdown
+<FilesMatch "^(\.htaccess|\.htpasswd|\.git|config\.php|db\.php|README\.md)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+# 2. ĐỊNH TUYẾN (ROUTING) - QUAN TRỌNG NHẤT
+# ----------------------------------------------------------------------
+# Kiểm tra: Nếu đường dẫn KHÔNG phải là một file thực tế đang tồn tại
 RewriteCond %{REQUEST_FILENAME} !-f
-# Và không phải là thư mục thực
+
+# Kiểm tra: Nếu đường dẫn KHÔNG phải là một thư mục thực tế đang tồn tại
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Thì chuyển hướng tất cả về index.php
+# Thì chuyển hướng mọi yêu cầu về file index.php để xử lý
 RewriteRule ^(.*)$ index.php [QSA,L]

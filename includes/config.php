@@ -11,7 +11,7 @@
 // Hằng số này giúp tạo các đường dẫn tuyệt đối an toàn (ví dụ: cho CSS, ảnh, và các liên kết).
 // PHẢI KHỚP VỚI TÊN THƯ MỤNG CỦA BẠN TRÊN XAMPP.
 // Dựa trên lỗi trước đó, tên thư mục của bạn là 'my_portfolio'.
-define('PROJECT_FOLDER', '/dangkhoa_project');
+define('PROJECT_FOLDER', '');
 
 // 2. CẤU HÌNH KẾT NỐI CSDL (Tùy chọn, nếu bạn không muốn đặt trong db.php)
 // define('DB_SERVER', 'localhost');
